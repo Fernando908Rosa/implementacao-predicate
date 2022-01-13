@@ -26,10 +26,10 @@ public  class Product {
 		this.price = price;
 	}
 
-	public void nonstaticPriceUpdate() {
-		setPrice(getPrice() * 1.1);
-	}
-		
+    public static String staticUpperCaseName(Product p) {
+    	return p.getName().toUpperCase();
+    }
+			
 	@Override
 	public String toString() {
 		return name + ", " + String.format("%.2f", price);
